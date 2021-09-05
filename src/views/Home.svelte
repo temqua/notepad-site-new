@@ -1,3 +1,20 @@
+<style>
+    .panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5); 
+        box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
+    }
+
+
+</style>
 <script>
 </script>
 
@@ -10,6 +27,15 @@
             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
         /></a
     > -->
+    <div class="cards">
+        <div class="panel">
+            Customizable
+            <img src="/assets/customizable.svg" alt="Customizable icon" width="32px" height="32px">
+        </div>
+        <div class="panel">
+            Reliable
+            <img src="/assets/reliable.svg" alt="Reliable icon" width="32px" height="32px">
+        </div>
+    </div>
 
-    <section class="section">section</section>
 </div>

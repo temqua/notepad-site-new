@@ -1,6 +1,3 @@
-<script>
-    import { navigateTo } from 'svelte-router-spa';
-</script>
 
 <header>
     <div id="logo">
@@ -14,9 +11,9 @@
         </a>
     </div>
     <div id="links">
-        <div><a href="/" on:click={() => navigateTo('/')}>Home</a>&nbsp;</div>
+        <div><a href="/">Home</a>&nbsp;</div>
         <div>
-            <a href="/" on:click={() => navigateTo('/about')}>Help</a>
+            <a href="/about">Help</a>
         </div>
     </div>
 </header>
@@ -36,7 +33,7 @@
         padding: 30px;
     }
 
-    header a.router-link-exact-active {
+    header :global(a.router-link-exact-active) {
         color: #0821ff;
     }
 
