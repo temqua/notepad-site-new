@@ -1,12 +1,15 @@
 <footer>
-    <div>
-        Developed by <a href="http://artemnazarov.github.io">Artem Nazarov</a> © {new Date().getFullYear()}
-    </div>
+  <div>
+    Developed by <a href="https://artemnazarov.github.io" target="_blank">Artem Nazarov</a> © {new Date().getFullYear()}
+  </div>
 </footer>
 
 <style>
-    footer {
-        background-color: #fafafa;
-        padding: 30px;
-    }
+  footer {
+    padding: 30px;
+    background-color: #fafafa;
+    color: #2c3e50;
+    text-align: center;
+  }
+
 </style>
