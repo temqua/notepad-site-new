@@ -29,7 +29,7 @@
 </script>
 
 <div>
-  <div id="main-banner">
+  <section id="main-banner" class="section">
     <div id="main-grid">
       <div id="product-slogan">
         <h1>CONTROL YOUR LIFESTYLE</h1>
@@ -43,7 +43,7 @@
         />
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="section section-grid">
     <div class="product-info">
@@ -105,19 +105,18 @@
 
 <style>
   #main-banner {
-    display: none;
+    background: none;
   }
 
   #main-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
-    padding-top: 100px;
   }
 
   .section-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .product-info {
@@ -131,7 +130,7 @@
   #product-slogan :global(.letter) {
     font-weight: 700;
     font-size: 36px;
-    color: #fff;
+    color: #222;
   }
 
   .panel {
@@ -152,6 +151,18 @@
   @media (min-width: 1024px) {
     .cards-grid {
       grid-template-columns: 1fr;
+    }
+
+    #product-slogan :global(.letter) {
+      color: #fff;
+    }
+
+    .section-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #main-grid {
+      grid-template-columns: 1fr 1fr;
     }
 
     #main-banner {
