@@ -14,3 +14,5 @@ jspm_packages/
 .env
 .env.test
 .env.local
+
+dist/

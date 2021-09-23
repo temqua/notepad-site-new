@@ -15,6 +15,7 @@
     "svelte": "^3.37.0"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "svelte-router-spa": "^6.0.2"
   }
 }

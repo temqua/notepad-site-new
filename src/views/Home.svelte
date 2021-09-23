@@ -1,20 +1,51 @@
 <script>
+  import anime from "animejs/lib/anime.es.js";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const textWrapper = document.getElementById("product-slogan");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime
+      .timeline({ loop: true })
+      .add({
+        targets: "#product-slogan .letter",
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i + 1),
+      })
+      .add({
+        targets: "#product-slogan h1",
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000,
+      });
+  });
 </script>
 
 <div>
   <div id="main-banner">
-    <div id="product-slogan">Control your life</div>
-    <div>
-      <img
-        src="/assets/screenshots/1.png"
-        alt="Banner"
-        width="305"
-        height="648"
-      />
+    <div id="main-grid">
+      <div id="product-slogan">
+        <h1>CONTROL YOUR LIFESTYLE</h1>
+      </div>
+      <div>
+        <img
+          src="/assets/screenshots/1.png"
+          alt="Banner"
+          width="305"
+          height="648"
+        />
+      </div>
     </div>
   </div>
 
-  <div class="section-grid">
+  <section class="section section-grid">
     <div class="product-info">
       <h1>Fully customizable</h1>
       <span>You choose your own style with color themes</span>
@@ -23,7 +54,7 @@
       <img src="/assets/screenshots/2.png" alt="" width="305" height="648" />
       <img src="/assets/screenshots/3.png" alt="" width="305" height="648" />
     </div>
-  </div>
+  </section>
   <!-- <div class="cards-grid">
     <div class="panel">
       <div>
@@ -77,18 +108,30 @@
     display: none;
   }
 
+  #main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 100px;
+  }
+
   .section-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 40px 0;
   }
 
   .product-info {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     font-size: 36px;
+  }
+
+  #product-slogan :global(.letter) {
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
   }
 
   .panel {
@@ -112,12 +155,10 @@
     }
 
     #main-banner {
+      display: block;
       width: 100%;
-      height: 600px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: flex-end;
       background-image: url("/assets/banner.jpg");
+      background-repeat: no-repeat;
     }
   }
 </style>
