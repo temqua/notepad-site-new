@@ -37,10 +37,6 @@ footer {
   flex-shrink: 0;
 }
 
-main {
-  text-align: center;
-}
-
 .relative {
   position: relative;
 }
