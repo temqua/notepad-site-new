@@ -20,9 +20,9 @@
 <style>
   header {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+    padding: 30px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-    text-align: right;
   }
 
   header a {
@@ -30,7 +30,6 @@
     font-size: 24px;
     color: #2c3e50;
     text-decoration: none;
-    padding: 30px;
   }
 
   header :global(a.router-link-exact-active) {
@@ -54,13 +53,35 @@
 
   #links {
     display: grid;
-    justify-content: right;
+    justify-content: center;
     align-content: center;
-    grid-auto-flow: column;
-    margin-right: 90px;
+    gap: 20px;
   }
 
   img {
     filter: drop-shadow(4px 3px 6px #aaa);
+  }
+
+  @media (min-width: 350px) {
+    header {
+      grid-auto-flow: column;
+      padding: 0;
+      text-align: right;
+    }
+    header a {
+      padding: 2rem;
+    }
+    #links {
+      grid-auto-flow: column;
+      justify-content: right;
+      margin-right: 2rem;
+      gap: 0;
+    }
+  }
+
+  @media (min-width: 640px) {
+    #links {
+      margin-right: 4rem;
+    }
   }
 </style>
