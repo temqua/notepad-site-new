@@ -10,7 +10,7 @@
     );
 
     anime
-      .timeline({ loop: true })
+      .timeline({ loop: false })
       .add({
         targets: "#product-slogan .letter",
         opacity: [0, 1],
@@ -31,8 +31,13 @@
 <div>
   <section id="main-banner" class="section">
     <div id="main-grid">
-      <div id="product-slogan">
-        <h1>CONTROL YOUR LIFESTYLE</h1>
+      <div>
+        <div id="product-slogan">
+          <h1>Keep your thoughts in a safe place</h1>
+        </div>
+        <button id="lift-button">
+          <a href="/#products-download">START NOW </a>
+        </button>
       </div>
       <div class="product-image">
         <img src="/assets/screenshots/1.png" alt="Banner" />
@@ -86,12 +91,13 @@
     </div>
   </section>
   <!--"https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"-->
-  <section class="section products-download">
+  <section id="products-download" class="section">
     <div class="product-link">
       <h1>Lite</h1>
+      <div><img src="/assets/lite-qr.svg" alt="Lite version QR-code"></div>
       <div class="product-button">
         <a
-          href="https://play.google.com/store/apps/details?id=ru.diman169.notepad.lite&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          href="https://play.google.com/store/apps/details?id=ru.diman169.notepad.lite"
           ><img
             alt="Get it on Google Play"
             src="/assets/en_badge_web_generic.png"
@@ -101,9 +107,10 @@
     </div>
     <div class="product-link">
       <h1>Pure</h1>
+      <div><img src="/assets/pure-qr.svg" alt="Pure version QR-code"></div>
       <div class="product-button">
         <a
-          href="https://play.google.com/store/apps/details?id=ru.diman169.notepad&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          href="https://play.google.com/store/apps/details?id=ru.diman169.notepad"
         >
           <img
             alt="Get it on Google Play"
@@ -114,9 +121,10 @@
     </div>
     <div class="product-link">
       <h1>Secure</h1>
+      <div><img src="/assets/pure-qr.svg" alt="Pure version QR-code"></div>
       <div class="product-button">
         <a
-          href="https://play.google.com/store/apps/details?id=ru.diman169.notepad&hl=ru&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          href="https://play.google.com/store/apps/details?id=ru.diman169.notepad"
         >
           <img
             alt="Get it on Google Play"
@@ -129,6 +137,8 @@
 </div>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
   #main-banner {
     background-image: url("/assets/banner.jpg");
     width: 100%;
@@ -175,19 +185,23 @@
     margin-bottom: 3rem;
   }
 
-  .products-download {
+  #products-download {
     display: grid;
     grid-template-columns: 1fr;
+    background-image: url("/assets/products.png");
+    color: #fff;
   }
 
-  .products-download h1 {
-    padding-left: 1.5rem;
+  #products-download h1 {
     font-size: 3rem;
+    font-family: 'Montserrat Light', sans-serif;
   }
 
   .product-link {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .product-button {
@@ -200,13 +214,27 @@
   }
 
   #product-slogan :global(.letter) {
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #fff;
   }
 
   #product-slogan {
     margin-bottom: 3rem;
+  }
+
+  #lift-button {
+    /* border: none; */
+    border-radius: 4px;
+    padding: 20px 90px;
+    color: #0E1821;
+    background-image: linear-gradient(#14E3FF, #1FAFDD);
+  }
+
+  #lift-button a {
+    text-decoration: none;
+    color: #0E1821;
   }
 
   /* .panel {
@@ -245,7 +273,7 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    .products-download {
+    #products-download {
       grid-template-columns: 1fr 1fr 1fr;
     }
 

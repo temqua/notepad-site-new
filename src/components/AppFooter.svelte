@@ -1,6 +1,7 @@
 <footer>
   <div>
-    Developed by <a href="https://artemnazarov.github.io" target="_blank">Artem Nazarov</a> © {new Date().getFullYear()}
+    Developed and designed by <a href="https://artemnazarov.github.io" target="_blank">Artem Nazarov</a> and
+    <a href="https://www.behance.net/skyhaussmann" target="_blank">Kate Kondakova</a> © {new Date().getFullYear()}
   </div>
 </footer>
 
