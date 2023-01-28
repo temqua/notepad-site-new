@@ -1,14 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Notepad</title>
     <link rel="stylesheet" href="/src/global.css">
-  </head>
-  <body>
-    <div id="app"></div>
+    <link rel="stylesheet" href="/src/main.css">
     <script type="module" src="/src/main.js"></script>
-  </body>
+
+</head>
+<body>
+
+<div id="app">
+    <main>
+        <section id="main-banner" class="section">
+            <div id="logo">
+                <a href="/">
+                    <img src="/assets/logo_192x192.png" width="128" height="128" alt="Notepad logo"/>
+                </a>
+            </div>
+            <div id="main-grid">
+                <div>
+                    <div id="product-slogan">
+                        <h1>Keep your thoughts in a safe place</h1>
+                    </div>
+                    <a id="products-link" href="#products-download">
+                        <button>START NOW!</button>
+                    </a>
+
+                </div>
+                <div class="product-image">
+                    <img src="/assets/screenshots/1.png" alt="Banner"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-grid">
+            <div class="product-info">
+                <h1>Fully customizable 🎨</h1>
+                <span>You choose your own style settings and color themes</span>
+            </div>
+            <div class="product-screenshots">
+                <div class="product-image">
+                    <img src="/assets/screenshots/2.png" alt="Color palette"/>
+                </div>
+                <div class="product-image">
+                    <img src="/assets/screenshots/3.png" alt="Appearance settings"/>
+                </div>
+            </div>
+        </section>
+        <section class="section section-grid">
+            <div class="product-info even">
+                <h1>Reliability</h1>
+                <span
+                >Your data are in safety with our out-of-the-box every day backup and
+        Google Disk Sync 🔄</span
+                >
+            </div>
+            <div class="product-screenshots">
+                <div class="product-image">
+                    <img src="/assets/screenshots/5.png" alt="Backup info"/>
+                </div>
+                <div class="product-image">
+                    <img src="/assets/screenshots/6.png" alt="Backups list"/>
+                </div>
+            </div>
+        </section>
+        <section class="section section-grid">
+            <div class="product-info">
+                <h1>Convenient for advanced users</h1>
+                <ul>
+                    <li>Markdown edit and preview</li>
+                    <li>Search queries and bookmarks to deal with big amount of data</li>
+                </ul>
+            </div>
+            <div class="product-screenshots">
+                <div class="product-image">
+                    <img src="/assets/screenshots/7.png" alt="Markdown edit"/>
+                </div>
+                <div class="product-image">
+                    <img src="/assets/screenshots/8.png" alt="Markdown result"/>
+                </div>
+            </div>
+        </section>
+        <section class="section section-grid">
+            <div class="product-info even">
+                <h1>Privacy</h1>
+                <span>Encrypt all your notes with <a
+                        href="https://www.websiterating.com/cloud-storage/what-is-aes-256-encryption/">AES-256</a> algorithm to make it impossible for reading your private information without password. It is one of the most reliable algorithms. </span>
+            </div>
+            <div class="product-screenshots">
+                <div class="product-image">
+                    <img src="/assets/screenshots/9.png" alt="Encrypted"/>
+                </div>
+                <div class="product-image">
+                    <img src="/assets/screenshots/10.png" alt="Set encryption password"/>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h1 id="guide-header">Video guide</h1>
+            <div id="video-container">
+                <iframe
+                        src="https://www.youtube.com/embed/videoseries?list=PLYsidn-CaDmEzTPhAtQgZ5MXp5dalLEI_"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                ></iframe>
+            </div>
+
+        </section>
+        <!--"https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"-->
+        <section id="products-download" class="section">
+            <div class="product-link">
+                <h1>Lite</h1>
+                <div class="qr"><img src="/assets/lite-qr.svg" alt="Lite version QR-code"></div>
+                <div class="product-button">
+                    <a href="https://play.google.com/store/apps/details?id=ru.diman169.notepad.lite"><img
+                            alt="Get it on Google Play"
+                            src="/assets/en_badge_web_generic.png"
+                    /></a>
+                </div>
+            </div>
+            <div class="product-link">
+                <h1>Pure</h1>
+                <div class="qr"><img src="/assets/pure-qr.svg" alt="Pure version QR-code"></div>
+                <div class="product-button">
+                    <a href="https://play.google.com/store/apps/details?id=ru.diman169.notepad">
+                        <img
+                                alt="Get it on Google Play"
+                                src="/assets/en_badge_web_generic.png"
+                        />
+                    </a>
+                </div>
+            </div>
+            <div class="product-link">
+                <h1>Secure</h1>
+                <div class="qr"><img src="/assets/pure-qr.svg" alt="Pure version QR-code"></div>
+                <div class="product-button">
+                    <a
+                            href="https://play.google.com/store/apps/details?id=ru.diman169.notepad"
+                    >
+                        <img
+                                alt="Get it on Google Play"
+                                src="/assets/en_badge_web_generic.png"
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            Developed and designed by <a href="https://temqua.github.io" target="_blank">Artem Nazarov</a>
+            and
+            <a href="https://www.behance.net/skyhaussmann" target="_blank">Kate Kondakova</a>
+            © <span id="year"></span>
+        </div>
+    </footer>
+
+</div>
+</body>
 </html>

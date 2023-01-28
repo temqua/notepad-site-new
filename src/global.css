@@ -37,18 +37,6 @@ footer {
   flex-shrink: 0;
 }
 
-.relative {
-  position: relative;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
 .section {
   padding: 3rem 1.5rem;
 }
@@ -61,3 +49,13 @@ footer {
     padding: 18rem 1.5rem;
   }
 }
+
+
+footer {
+  padding: 30px;
+  background-color: #fafafa;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* end layout */
